@@ -1,0 +1,5 @@
+{
+	"extends": ["airbnb-base", "prettier"],
+	"ignorePatterns": ["node_modules/", "dist/", "gulpfile.js"],
+	"rules": {}
+}
