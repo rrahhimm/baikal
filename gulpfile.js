@@ -15,7 +15,7 @@ gulp.task('compile-pug', function () {
 // Компиляции SCSS файлов
 gulp.task('compile-sass', function () {
 	return gulp
-		.src('./src/scss/*.+(scss|sass)')
+		.src('./src/sass/*.sass')
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./dist/css'));
 });
@@ -25,14 +25,19 @@ gulp.task('copy-js', function () {
 	return gulp.src('./src/js/*.js').pipe(gulp.dest('./dist/js'));
 });
 
-// Копирование изображений
-gulp.task('copy-images', function () {
-	return gulp.src('./src/assets/images/**/*').pipe(gulp.dest('./dist/images'));
-});
-
 // Копирование шрифтов
 gulp.task('copy-fonts', function () {
 	return gulp.src('./src/assets/fonts/*').pipe(gulp.dest('./dist/fonts'));
+});
+
+// Копирование иконок
+gulp.task('copy-icons', function () {
+	return gulp.src('./src/assets/icons/**/*').pipe(gulp.dest('./dist/icons'));
+});
+
+// Копирование изображений
+gulp.task('copy-images', function () {
+	return gulp.src('./src/assets/images/**/*').pipe(gulp.dest('./dist/images'));
 });
 
 // BrowserSync
@@ -61,7 +66,8 @@ gulp.task(
 		'compile-pug',
 		'compile-sass',
 		'copy-js',
-		'copy-images',
 		'copy-fonts',
+		'copy-icons',
+		'copy-images',
 	),
 );

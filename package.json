@@ -5,12 +5,11 @@
 	"license": "MIT",
 	"version": "1.0.0",
 	"scripts": {
-		"format:prettier": "prettier --write '**/*.{html,css,scss,js}'",
-		"format:eslint": "eslint --fix **/*.js",
-		"format:stylelint": "stylelint --fix '**/*.{css,scss}'",
-		"format": "npm run format:prettier && npm run format:eslint && npm run format:stylelint",
-		"lint:prettier": "prettier --check '**/*.{html,css,scss,js}'",
-		"lint:eslint": "eslint --format=stylish **/*.js",
+		"format:prettier": "prettier --write 'src/**/*.{html,css,scss,js}' 'dist/**/*.{html,css,js}'",
+		"format:eslint": "eslint --fix src/**/*.js",
+		"format": "npm run format:prettier && npm run format:eslint",
+		"lint:prettier": "prettier --check 'src/**/*.{html,css,scss,js}' 'dist/**/*.{html,css,js}'",
+		"lint:eslint": "eslint --format=stylish src/**/*.js",
 		"lint": "npm run lint:eslint && npm run lint:prettier"
 	},
 	"devDependencies": {
@@ -22,12 +21,7 @@
 		"gulp-pug": "^5.0.0",
 		"gulp-sass": "^5.1.0",
 		"gulp-watch": "^5.0.1",
-		"postcss-scss": "^4.0.9",
 		"prettier": "^3.0.3",
-		"sass": "^1.69.5",
-		"stylelint": "^15.11.0",
-		"stylelint-config-recess-order": "^4.3.0",
-		"stylelint-config-standard": "^34.0.0",
-		"stylelint-scss": "^5.3.1"
+		"sass": "^1.69.5"
 	}
 }
