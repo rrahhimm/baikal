@@ -180,9 +180,10 @@ section {
 }
 
 .on-top-link {
+	display: block;
 	width: 40px;
 	height: 40px;
-	background-image: url('icons/arrow-up.svg');
+	background-image: url('../icons/arrow-up.svg');
 }
 
 .header {
@@ -220,4 +221,80 @@ section {
 	background-repeat: no-repeat;
 	background-size: 100% 10px;
 	background-image: url('../icons/selection-icon-blue.svg');
+}
+
+.footer {
+	padding: 40px 24px 20px;
+	color: #ffffff;
+	background-color: #282828;
+}
+
+.footer-top {
+	margin-bottom: 30px;
+}
+.footer-top .h3-title {
+	margin-bottom: 20px;
+}
+
+.footer__container {
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.footer__nav {
+	flex-direction: column;
+	align-items: start;
+	gap: 15px;
+}
+
+.footer__column:nth-child(3) {
+	display: flex;
+	flex-direction: column;
+}
+.footer__column:nth-child(4) {
+	align-self: center;
+}
+
+.footer__book-button {
+	margin-bottom: 15px;
+	padding: 8px 28px;
+	font-size: 18px;
+	letter-spacing: 0.54px;
+	border-radius: 5px;
+}
+
+.address-block,
+.phone-block {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 15px;
+}
+
+.address-block span {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 140%;
+	letter-spacing: 0.9px;
+}
+
+.phone-block {
+	font-size: 20px;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+.social__link {
+	display: block;
+	width: 30px;
+	height: 30px;
+	background-size: 100%;
+}
+
+.footer-copy {
+	font-family: Lora;
+	text-align: center;
 }

@@ -1,6 +1,6 @@
 footer.footer#footer
 	.footer-top
-		.container.flex
+		.container.footer__container.flex
 			.footer__column
 				a.footer__logo(href="#")
 					img(src="icons/footer-logo.svg" alt="logo")
@@ -28,13 +28,14 @@ footer.footer#footer
 				.address-block
 					span Адрес:
 					address Кайдаловская ул., 37, Чита
-				a(href="tel:+73022217856") +7 (3022) 217856
-				a(href="tel:+79294830255") +79294830255
+				.phone-block
+					a(href="tel:+73022217856") +73022217856
+					a(href="tel:+79294830255") +79294830255
 				ul.social
-					li.social__item.social__item_puprle
-						a.social__link.social__link-viber(href="#" style="background-image: url('../icons/viber.svg');" aria-label="link to Viber")
+					li.social__item.social__item_purple
+						a.social__link.social__link-viber(href="https://www.viber.com/" style="background-image: url('../icons/viber.svg');" target="_blank" aria-label="link to Viber")
 					li.social__item.social__item_green
-						a.social__link.social__link-whatsapp(href="#" style="background-image: url('../icons/whatsapp.svg');" aria-label="link to WhatsApp")
+						a.social__link.social__link-whatsapp(href="https://www.whatsapp.com/" style="background-image: url('../icons/whatsapp.svg');" target="_blank" aria-label="link to WhatsApp")
 
 	.footer-copy
 		.container
