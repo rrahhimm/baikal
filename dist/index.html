@@ -44,10 +44,10 @@
 		</header>
 		<main class="main">
 			<section id="intro">
-				<div class="container flex">
+				<div class="container intro__container flex">
 					<div class="intro__content">
 						<h1 class="intro__title">Байкал</h1>
-						<p class="descr">
+						<p class="intro__descr descr">
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 							enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -65,29 +65,36 @@
 				</div>
 			</section>
 			<section id="about">
-				<div class="container flex">
-					<div class="about__content">
-						<h2 class="h2-title">О гостинице</h2>
-						<p class="descr">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat.
-						</p>
-						<p class="descr">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-							enim ad minim veniam, quis nostrud exercitation ullamco laboris
-							nisi ut aliquip ex ea commodo consequat.
-						</p>
+				<div class="container">
+					<h2 class="h2-title">О гостинице</h2>
+					<div class="about__flex">
+						<div class="about__content">
+							<p class="about__descr descr">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<p class="about__descr descr">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+								eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+								enim ad minim veniam, quis nostrud exercitation ullamco laboris
+								nisi ut aliquip ex ea commodo consequat.
+							</p>
+							<img
+								class="about__decor"
+								src="icons/selection-icon-blue.svg"
+								alt=""
+							/>
+						</div>
+						<img
+							class="about__img"
+							src="images/about-img.svg"
+							width="810"
+							height="467"
+							alt="мултяшное изображение ресепшена"
+						/>
 					</div>
-					<img
-						class="about__img"
-						src="images/about-img.svg"
-						width="810"
-						height="467"
-						alt="мултяшное изображение ресепшена"
-					/>
 				</div>
 			</section>
 			<section id="benefits">
@@ -95,175 +102,205 @@
 					<h2 class="h2-title">Мы предлагаем</h2>
 					<ul class="benefits__list">
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/freeWIFI.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Бесплатный WI-FI</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/freeWIFI.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">Бесплатный WI-FI</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/access.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Круглосуточный доступ</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/access.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">
+									Круглосуточный доступ
+								</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/tv.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Телевизор</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/tv.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">Телевизор</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/carpark.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Парковка</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/carpark.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">Парковка</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/cleaning.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Влажная уборка</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/cleaning.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">Влажная уборка</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/bathhouse.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Банно-прачечный комплекст</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/bathhouse.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">
+									Банно-прачечный комплекст
+								</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/kitchen.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Собственная кухня</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/kitchen.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">Собственная кухня</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/hall.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Банкетный зал</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/hall.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">Банкетный зал</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 						<li class="benefits__item">
-							<img
-								class="benefits__img"
-								src="icons/benefits/canteen.svg"
-								loading="lazy"
-								height="65"
-								alt=""
-							/>
-							<h3 class="h3-title">Просторная столовая</h3>
-							<p class="benefits__descr descr">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-								eiusmod tempor.
-							</p>
+							<div class="benefits__item-wrapper">
+								<img
+									class="benefits__img"
+									src="icons/benefits/canteen.svg"
+									loading="lazy"
+									height="65"
+									alt=""
+								/>
+								<h3 class="benefits__item-title h3-title">
+									Просторная столовая
+								</h3>
+								<p class="benefits__descr descr">
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+									do eiusmod tempor.
+								</p>
+							</div>
 						</li>
 					</ul>
 				</div>
 			</section>
 			<section id="price">
-				<div class="container price__container">
+				<div class="container">
 					<h2 class="h2-title">Наши номера</h2>
-					<article class="price-card">
-						<img
-							class="price-card__img"
-							src="images/price/single-room.svg"
-							height="110"
-							alt=""
-						/>
-						<h3 class="h3-title">Одноместный номер</h3>
-						<ul class="price-card__services">
-							<li class="price-card__service">Душ</li>
-							<li class="price-card__service">Кровать</li>
-							<li class="price-card__service">Телевизор</li>
-							<li class="price-card__service">Wi-Fi</li>
-							<li class="price-card__service">Что-то ещё</li>
-							<li class="price-card__service">Что-то ещё</li>
-						</ul>
-						<h4 class="h4-title">Стоимость</h4>
-						<div class="price-card__price">1000Р / сутки</div>
-					</article>
-					<article class="price-card">
-						<img
-							class="price-card__img"
-							src="images/price/double-room.svg"
-							alt=""
-							height="110"
-						/>
-						<h3 class="h3-title">Двухместный номер</h3>
-						<ul class="price-card__services">
-							<li class="price-card__service">Душ</li>
-							<li class="price-card__service">Кровать</li>
-							<li class="price-card__service">Телевизор</li>
-							<li class="price-card__service">Wi-Fi</li>
-							<li class="price-card__service">Что-то ещё</li>
-							<li class="price-card__service">Что-то ещё</li>
-						</ul>
-						<h4 class="h4-title">Стоимость</h4>
-						<div class="price-card__price">2000Р / сутки</div>
-					</article>
+					<div class="price__cards-wrapper">
+						<article class="price-card">
+							<img
+								class="price-card__img"
+								src="images/price/single-room.svg"
+								height="110"
+								alt=""
+							/>
+							<h3 class="h3-title">Одноместный номер</h3>
+							<ul class="price-card__services">
+								<li class="price-card__service">Душ</li>
+								<li class="price-card__service">Кровать</li>
+								<li class="price-card__service">Телевизор</li>
+								<li class="price-card__service">Wi-Fi</li>
+								<li class="price-card__service">Что-то ещё</li>
+								<li class="price-card__service">Что-то ещё</li>
+							</ul>
+							<div>
+								<h4 class="h4-title">Стоимость</h4>
+								<div class="price-card__price"><span>1000Р /</span> сутки</div>
+							</div>
+						</article>
+						<article class="price-card">
+							<img
+								class="price-card__img"
+								src="images/price/double-room.svg"
+								alt=""
+								height="110"
+							/>
+							<h3 class="h3-title">Двухместный номер</h3>
+							<ul class="price-card__services">
+								<li class="price-card__service">Душ</li>
+								<li class="price-card__service">Кровать</li>
+								<li class="price-card__service">Телевизор</li>
+								<li class="price-card__service">Wi-Fi</li>
+								<li class="price-card__service">Что-то ещё</li>
+								<li class="price-card__service">Что-то ещё</li>
+							</ul>
+							<div>
+								<h4 class="h4-title">Стоимость</h4>
+								<div class="price-card__price"><span>2000Р /</span> сутки</div>
+							</div>
+						</article>
+					</div>
 				</div>
 			</section>
 			<section id="reviews">
@@ -278,14 +315,14 @@
 								height="100"
 								alt="аватар Иван Иванов"
 							/>
-							<h4 class="h4-title">Иван Иванов</h4>
+							<h4 class="review-card__title h4-title">Иван Иванов</h4>
 							<p class="review-card__descr descr">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor. Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor.
 							</p>
 							<time class="review-card__date" datetime="2023-03-01"
-								>01-03-2023</time
+								>01.03.2023</time
 							>
 						</article>
 						<article class="review-card">
@@ -296,14 +333,14 @@
 								height="100"
 								alt="аватар Иван Иванов"
 							/>
-							<h4 class="h4-title">Иван Иванов</h4>
+							<h4 class="review-card__title h4-title">Иван Иванов</h4>
 							<p class="review-card__descr descr">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor. Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor.
 							</p>
 							<time class="review-card__date" datetime="2023-03-01"
-								>01-03-2023</time
+								>01.03.2023</time
 							>
 						</article>
 						<article class="review-card">
@@ -314,14 +351,14 @@
 								height="100"
 								alt="аватар Иван Иванов"
 							/>
-							<h4 class="h4-title">Иван Иванов</h4>
+							<h4 class="review-card__title h4-title">Иван Иванов</h4>
 							<p class="review-card__descr descr">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor. Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor.
 							</p>
 							<time class="review-card__date" datetime="2023-03-01"
-								>01-03-2023</time
+								>01.03.2023</time
 							>
 						</article>
 						<article class="review-card">
@@ -332,14 +369,14 @@
 								height="100"
 								alt="аватар Иван Иванов"
 							/>
-							<h4 class="h4-title">Иван Иванов</h4>
+							<h4 class="review-card__title h4-title">Иван Иванов</h4>
 							<p class="review-card__descr descr">
 								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 								eiusmod tempor. Lorem ipsum dolor sit amet, consectetur
 								adipiscing elit, sed do eiusmod tempor.
 							</p>
 							<time class="review-card__date" datetime="2023-03-01"
-								>01-03-2023</time
+								>01.03.2023</time
 							>
 						</article>
 					</div>
@@ -356,27 +393,31 @@
 							alt="карта местности"
 						/>
 						<div class="map__content">
-							<h2 class="h2-title">Контакты</h2>
-							<div class="address-block">
+							<h2 class="contacts__title h2-title">Контакты</h2>
+							<div class="contacts__address-block address-block">
 								<span>Адрес:</span>
 								<address>Кайдаловская ул., 37, Чита</address>
 							</div>
-							<a href="tel:+73022217856">+7 (3022) 217856</a
-							><a href="tel:+79294830255">+79294830255</a>
-							<ul class="social">
+							<div class="contacts__phone-block phone-block">
+								<a href="tel:+73022217856">+73022217856</a
+								><a href="tel:+79294830255">+79294830255</a>
+							</div>
+							<ul class="contacts__social social">
 								<li class="social__item">
 									<a
 										class="social__link social__link-viber"
-										href="#"
+										href="https://www.viber.com/"
 										style="background-image: url('../icons/viber.svg')"
+										target="_blank"
 										aria-label="перейти в Viber"
 									></a>
 								</li>
 								<li class="social__item">
 									<a
 										class="social__link social__link-whatsapp"
-										href="#"
+										href="https://www.whatsapp.com/"
 										style="background-image: url('../icons/whatsapp.svg')"
+										target="_blank"
 										aria-label="перейти в WhatsApp"
 									></a>
 								</li>

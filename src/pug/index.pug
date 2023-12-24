@@ -14,20 +14,22 @@ html(lang="ru")
 
 		main.main
 			section#intro
-				.container.flex
+				.container.intro__container.flex
 					.intro__content
 						h1.intro__title Байкал
-						p.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						p.intro__descr.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						button.book-button(type="button") Забронировать
 					img.intro__img(src="images/intro-img.svg" width="706" height="602" alt="мултяшное изображение гостиницы")
 
 			section#about
-				.container.flex
-					.about__content
-						h2.h2-title О гостинице
-						p.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-						p.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-					img.about__img(src="images/about-img.svg" width="810" height="467" alt="мултяшное изображение ресепшена")
+				.container
+					h2.h2-title О гостинице
+					.about__flex
+						.about__content
+							p.about__descr.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							p.about__descr.descr Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+							img.about__decor(src="icons/selection-icon-blue.svg" alt="")
+						img.about__img(src="images/about-img.svg" width="810" height="467" alt="мултяшное изображение ресепшена")
 
 			section#benefits
 				.container
@@ -35,38 +37,46 @@ html(lang="ru")
 					ul.benefits__list
 						each i in benefitsItemsContent
 							li.benefits__item
-								img.benefits__img(src="icons/benefits/" + i.path + ".svg" loading="lazy" height="65" alt="")
-								h3.h3-title= i.name
-								p.benefits__descr.descr= i.content
+								.benefits__item-wrapper
+									img.benefits__img(src="icons/benefits/" + i.path + ".svg" loading="lazy" height="65" alt="")
+									h3.benefits__item-title.h3-title= i.name
+									p.benefits__descr.descr= i.content
 
 			section#price
-				.container.price__container
+				.container
 					h2.h2-title Наши номера
-					article.price-card
-						img.price-card__img(src="images/price/single-room.svg" height="110" alt="")
-						h3.h3-title Одноместный номер
-						ul.price-card__services
-							li.price-card__service Душ
-							li.price-card__service Кровать
-							li.price-card__service Телевизор
-							li.price-card__service Wi-Fi
-							li.price-card__service Что-то ещё
-							li.price-card__service Что-то ещё
-						h4.h4-title Стоимость
-						.price-card__price 1000Р / сутки
+					.price__cards-wrapper
+						article.price-card
+							img.price-card__img(src="images/price/single-room.svg" height="110" alt="")
+							h3.h3-title Одноместный номер
+							ul.price-card__services
+								li.price-card__service Душ
+								li.price-card__service Кровать
+								li.price-card__service Телевизор
+								li.price-card__service Wi-Fi
+								li.price-card__service Что-то ещё
+								li.price-card__service Что-то ещё
+							div
+								h4.h4-title Стоимость
+								.price-card__price
+									span 1000Р /
+									|  сутки
 
-					article.price-card
-						img.price-card__img(src="images/price/double-room.svg" alt="" height="110")
-						h3.h3-title Двухместный номер
-						ul.price-card__services
-							li.price-card__service Душ
-							li.price-card__service Кровать
-							li.price-card__service Телевизор
-							li.price-card__service Wi-Fi
-							li.price-card__service Что-то ещё
-							li.price-card__service Что-то ещё
-						h4.h4-title Стоимость
-						.price-card__price 2000Р / сутки
+						article.price-card
+							img.price-card__img(src="images/price/double-room.svg" alt="" height="110")
+							h3.h3-title Двухместный номер
+							ul.price-card__services
+								li.price-card__service Душ
+								li.price-card__service Кровать
+								li.price-card__service Телевизор
+								li.price-card__service Wi-Fi
+								li.price-card__service Что-то ещё
+								li.price-card__service Что-то ещё
+							div
+								h4.h4-title Стоимость
+								.price-card__price
+									span 2000Р /
+									|  сутки
 
 			section#reviews
 				.container
@@ -75,25 +85,26 @@ html(lang="ru")
 						each review in reviewsList
 							article.review-card
 								img.review-card__avatar(src="images/reviews/" + review.avatarPath width="100" height="100" alt="аватар " + review.name)
-								h4.h4-title= review.name
+								h4.review-card__title.h4-title= review.name
 								p.review-card__descr.descr= review.text
-								time.review-card__date(datetime=review.date.year + "-" + review.date.month + "-" + review.date.day) #{review.date.day}-#{review.date.month}-#{review.date.year}
+								time.review-card__date(datetime=review.date.year + "-" + review.date.month + "-" + review.date.day) #{review.date.day}.#{review.date.month}.#{review.date.year}
 
 			section#contacts
 				.container
 					.map__wrapper
 						img.map(src="images/map-img.jpg" loading="lazy" height="503" alt="карта местности")
 						.map__content
-							h2.h2-title Контакты
-							.address-block
+							h2.contacts__title.h2-title Контакты
+							.contacts__address-block.address-block
 								span Адрес:
 								address Кайдаловская ул., 37, Чита
-							a(href="tel:+73022217856") +7 (3022) 217856
-							a(href="tel:+79294830255") +79294830255
-							ul.social
+							.contacts__phone-block.phone-block
+								a(href="tel:+73022217856") +73022217856
+								a(href="tel:+79294830255") +79294830255
+							ul.contacts__social.social
 								li.social__item
-									a.social__link.social__link-viber(href="#" style="background-image: url('../icons/viber.svg');" aria-label="перейти в Viber")
+									a.social__link.social__link-viber(href="https://www.viber.com/" style="background-image: url('../icons/viber.svg');" target="_blank" aria-label="перейти в Viber")
 								li.social__item
-									a.social__link.social__link-whatsapp(href="#" style="background-image: url('../icons/whatsapp.svg');" aria-label="перейти в WhatsApp")
+									a.social__link.social__link-whatsapp(href="https://www.whatsapp.com/" style="background-image: url('../icons/whatsapp.svg');" target="_blank" aria-label="перейти в WhatsApp")
 
 		include partials/_footer

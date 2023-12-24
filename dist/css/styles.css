@@ -83,6 +83,7 @@ body {
 
 section {
 	padding: 0 24px;
+	margin-bottom: 100px;
 }
 
 .container {
@@ -94,6 +95,7 @@ section {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .intro__title,
@@ -126,6 +128,7 @@ section {
 .h2-title {
 	position: relative;
 	display: inline-block;
+	margin-bottom: 80px;
 	font-size: 50px;
 	letter-spacing: 1.5px;
 }
@@ -136,6 +139,7 @@ section {
 	content: '';
 	width: 130px;
 	height: 10px;
+	background-size: 130px 10px;
 	background-image: url('../icons/selection-icon-grey.svg');
 	background-color: transparent;
 	background-repeat: no-repeat;
@@ -166,6 +170,10 @@ section {
 	background-color: #d95845;
 	border-radius: 10px;
 	box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.18);
+	transition: background-color 0.3s linear;
+}
+.book-button:hover {
+	background-color: #c03d28;
 }
 
 .callback-button {
@@ -297,4 +305,200 @@ section {
 .footer-copy {
 	font-family: Lora;
 	text-align: center;
+}
+
+/* INTRO */
+.intro__container {
+	gap: 27px;
+}
+
+.intro__descr {
+	max-width: 460px;
+	margin-bottom: 40px;
+}
+
+/* ABOUT */
+.about__flex {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.about__content {
+	max-width: 370px;
+}
+
+.about__descr:not(:last-of-type) {
+	margin-bottom: 20px;
+}
+
+.about__decor {
+	margin-top: 144px;
+	width: 97.5px;
+	height: 9px;
+}
+
+/* BENEFITS */
+.benefits__list {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 50px;
+	margin: 0 auto;
+	max-width: 1020px;
+}
+
+.benefits__item {
+	flex-basis: 30%;
+	text-align: center;
+}
+.benefits__item-wrapper {
+	margin: 0 auto;
+	max-width: 237px;
+}
+
+.benefits__img {
+	margin: 0 auto 20px;
+}
+
+.benefits__item-title {
+	margin: 0 auto 10px;
+	max-width: 226px;
+}
+
+/* PRICE */
+.price__cards-wrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+	background-image: url('../images/price/price-img-man.svg'),
+		url('../images/price/price-img-woman.svg');
+	background-repeat: no-repeat;
+	background-position:
+		left center,
+		right center;
+}
+
+.price-card {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 40px 24px;
+	width: 285px;
+	border: 3px solid #2f70d9;
+	border-radius: 20px;
+}
+.price-card__img {
+	max-height: 110px;
+}
+.price-card__services {
+	display: flex;
+	flex-direction: column;
+	gap: 13px;
+}
+.price-card__service {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+.price-card__service::marker {
+	font-size: 25px;
+}
+.price-card .h4-title {
+	margin-bottom: 10px;
+}
+.price-card div {
+	text-align: center;
+}
+.price-card__price {
+	font-family: Lora, serif;
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: 0.6px;
+	color: #d95845;
+}
+.price-card__price span {
+	font-size: 25px;
+	font-weight: 700;
+}
+
+/* REVIEWS */
+.reviews__row {
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.review-card {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding: 25px 24px;
+	max-width: 285px;
+	border-radius: 20px;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.1);
+}
+.review-card__avatar {
+	margin: 0 auto;
+}
+.review-card__title,
+.review-card__date {
+	text-align: center;
+}
+
+/* CONTACTS */
+.map__wrapper {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.map {
+	max-width: none;
+}
+
+.map__content {
+	position: absolute;
+	left: 5%;
+	display: flex;
+	flex-direction: column;
+	gap: 25px;
+	max-width: 355px;
+	padding: 48px 32px;
+	background-color: #ffffff;
+	border-radius: 20px;
+	box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.15);
+}
+
+.contacts__title {
+	margin-bottom: 0;
+}
+
+.contacts__social {
+	gap: 30px;
+}
+.contacts__social .social__link {
+	width: 60px;
+	height: 60px;
+}
+
+.contacts__address-block,
+.contacts__phone-block {
+	margin-bottom: 0;
+}
+
+.contacts__address-block {
+	max-width: 200px;
+	gap: 10px;
+}
+
+.contacts__phone-block {
+	gap: 10px;
+	font-size: 30px;
+	color: #000000;
 }
