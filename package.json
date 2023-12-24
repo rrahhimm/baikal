@@ -5,11 +5,11 @@
 	"license": "MIT",
 	"version": "1.0.0",
 	"scripts": {
-		"format:prettier": "prettier --write 'src/**/*.{html,css,scss,js}' 'dist/**/*.{html,css,js}'",
-		"format:eslint": "eslint --fix src/**/*.js",
+		"format:prettier": "prettier --write '**/*.{html,css,js}'",
+		"format:eslint": "eslint --fix **/*.js",
 		"format": "npm run format:prettier && npm run format:eslint",
-		"lint:prettier": "prettier --check 'src/**/*.{html,css,scss,js}' 'dist/**/*.{html,css,js}'",
-		"lint:eslint": "eslint --format=stylish src/**/*.js",
+		"lint:prettier": "prettier --check '**/*.{html,css,js}'",
+		"lint:eslint": "eslint --format=stylish **/*.js",
 		"lint": "npm run lint:eslint && npm run lint:prettier"
 	},
 	"devDependencies": {

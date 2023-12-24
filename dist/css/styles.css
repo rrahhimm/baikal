@@ -179,21 +179,45 @@ section {
 	border-radius: 5px;
 }
 
-.logo {
-	max-width: 180px;
-	max-height: 45px;
+.on-top-link {
+	width: 40px;
+	height: 40px;
+	background-image: url('icons/arrow-up.svg');
+}
+
+.header {
+	padding: 30px 24px 0;
+	margin-bottom: 105px;
+}
+
+.header__right {
+	display: flex;
+	align-items: center;
+	gap: 50px;
 }
 
 .nav {
+	gap: 30px;
 	display: flex;
+	align-items: flex-end;
 }
 .nav__link {
 	font-size: 18px;
 	letter-spacing: 0.54px;
 }
-
-.on-top-link {
-	width: 40px;
-	height: 40px;
-	background-image: url('icons/arrow-up.svg');
+.nav__link.active {
+	position: relative;
+	font-weight: 800;
+	color: #2f70d9;
+}
+.nav__link.active::after {
+	position: absolute;
+	left: -7.5%;
+	bottom: -15px;
+	height: 9px;
+	width: 115%;
+	content: '';
+	background-repeat: no-repeat;
+	background-size: 100% 10px;
+	background-image: url('../icons/selection-icon-blue.svg');
 }

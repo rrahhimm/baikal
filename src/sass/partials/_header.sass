@@ -1,1 +1,33 @@
+@use 'variables' as *
+
 // HEADER
+.header
+	padding: 30px 24px 0
+	margin-bottom: 105px
+
+.header__right
+	display: flex
+	align-items: center
+	gap: 50px
+
+.nav
+	gap: 30px
+	display: flex
+	align-items: flex-end
+	&__link
+		font-size: 18px
+		letter-spacing: 0.54px
+		&.active
+			position: relative
+			font-weight: 800
+			color: $primary-color
+			&::after
+				position: absolute
+				left: -7.5%
+				bottom: -15px
+				height: 9px
+				width: 100% * 1.15
+				content: ""
+				background-repeat: no-repeat
+				background-size: 100% 10px
+				background-image: url('../icons/selection-icon-blue.svg')

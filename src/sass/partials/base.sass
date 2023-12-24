@@ -1,3 +1,5 @@
+@use 'variables' as *
+
 // STYLE RESET
 *
 	margin: 0
@@ -64,10 +66,6 @@ address
 	font-weight: 700
 	src: url('fonts/OpenSans-700.woff2') format('woff2')
 	font-display: swap
-
-// VARIABLES
-$primary-color: #2F70D9
-$seconday-color: #D95845
 
 // COMMON STYLES
 html
@@ -163,16 +161,6 @@ section
 	background-color: transparent
 	border: 2px solid $primary-color
 	border-radius: 5px
-
-.logo
-	max-width: 180px
-	max-height: 45px
-
-.nav
-	display: flex
-	&__link
-		font-size: 18px
-		letter-spacing: 0.54px
 
 .on-top-link
 	width: 40px

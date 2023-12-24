@@ -15,7 +15,7 @@ gulp.task('compile-pug', function () {
 // Компиляции SCSS файлов
 gulp.task('compile-sass', function () {
 	return gulp
-		.src('./src/sass/*.sass')
+		.src(['./src/scss/*.scss', './src/sass/*.sass'])
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./dist/css'));
 });
@@ -51,12 +51,12 @@ gulp.task('browser-sync', function () {
 
 // Отслеживание изменений в папке src
 gulp.task('watch', function () {
-	watch('./src/pug/*.pug', gulp.series('compile-pug', browserSync.reload));
+	watch('./src/pug/**/*.pug', gulp.series('compile-pug', browserSync.reload));
 	watch(
-		'./src/scss/*.+(scss|sass)',
+		['./src/scss/**/*.scss', './src/sass/**/*.sass'],
 		gulp.series('compile-sass', browserSync.reload),
 	);
-	watch('./src/js/*.js', gulp.series('copy-js', browserSync.reload));
+	watch('./src/js/**/*.js', gulp.series('copy-js', browserSync.reload));
 });
 
 gulp.task('default', gulp.parallel('watch', 'browser-sync'));
